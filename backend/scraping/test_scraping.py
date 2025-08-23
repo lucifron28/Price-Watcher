@@ -168,7 +168,8 @@ class TestScrapingTasks:
     
     def test_scrape_nonexistent_product(self):
         """Test scraping nonexistent product."""
-        fake_id = 'non-existent-id'
+        import uuid
+        fake_id = str(uuid.uuid4())  # Use valid UUID format
         result = scrape_single_product(fake_id)
         
         assert result['success'] is False
