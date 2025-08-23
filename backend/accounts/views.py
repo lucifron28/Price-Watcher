@@ -81,11 +81,10 @@ class CookieTokenRefreshView(TokenRefreshView):
             )
         
         # Create request data with refresh token
-        request.data._mutable = True
-        request.data['refresh'] = refresh_token
-        request.data._mutable = False
+        data = request.data.copy() if hasattr(request.data, 'copy') else {}
+        data['refresh'] = refresh_token
         
-        serializer = self.get_serializer(data=request.data)
+        serializer = self.get_serializer(data=data)
         
         try:
             serializer.is_valid(raise_exception=True)
@@ -198,6 +197,7 @@ def logout_view(request):
 
 
 @api_view(['GET'])
+@permission_classes([AllowAny])
 def csrf_token_view(request):
     """
     Get CSRF token for frontend.
