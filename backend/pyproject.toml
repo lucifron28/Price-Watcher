@@ -17,6 +17,9 @@ dependencies = [
     "requests>=2.31.0",
     "python-decouple>=3.8",
     "django-extensions>=3.2.3",
+    "aiohttp>=3.12.15",
+    "playwright-stealth>=2.0.0",
+    "undetected-playwright>=0.3.0",
 ]
 
 [project.optional-dependencies]
