@@ -1,6 +1,4 @@
-"""
-Celery tasks for price scraping and monitoring.
-"""
+import asyncio
 import logging
 from datetime import datetime, timedelta
 from decimal import Decimal
@@ -33,7 +31,7 @@ def scrape_single_product(self, product_id: str) -> Dict[str, Any]:
         scrape_start = timezone.now()
         
         # Perform scraping
-        scraped_data = scrape_product_data(product.product_url)
+        scraped_data = asyncio.run(scrape_product_data(product.product_url))
         
         if not scraped_data:
             logger.error(f"Failed to scrape product {product_id}")
@@ -320,6 +318,7 @@ def generate_scraping_report() -> Dict[str, Any]:
         failed_scrapes = total_scrapes - successful_scrapes
         
         # Average scrape duration
+        from django.db import models
         avg_duration = today_prices.aggregate(
             avg_duration=models.Avg('scrape_duration')
         )['avg_duration'] or 0
