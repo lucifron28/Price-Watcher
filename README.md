@@ -7,7 +7,6 @@ Built with Django 5 + DRF, React 18 (Vite), Tailwind CSS v4, Celery, Redis, and 
 - **Multi-Platform Scraping** – Playwright scripts collect price, stock, and rating data.
 - **Real-Time Notifications** – Email and webhook alerts when prices hit user-defined thresholds.
 - **Historical Charts** – Interactive graphs of price history, volatility, and savings.
-- **AI Price Prediction** – Optional ML model forecasts the next 7-day price range.
 - **Shared Wish-Lists** – Invite friends or family to track items together.
 - **Bulk Tools** – CSV import/export and one-click browser extension.
 - **Multi-Currency** – Auto-converts prices with live FX rates.
@@ -32,7 +31,7 @@ Built with Django 5 + DRF, React 18 (Vite), Tailwind CSS v4, Celery, Redis, and 
 
 
 ```sh
-git clone https://github.com/yourname/price-watcher.git
+git clone https://github.com/lucifron28/Price-Watcher.git
 cd price-watcher
 cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
@@ -143,5 +142,5 @@ MIT
 
 ---
 
-Portfolio project by **Your Name**.  
+Portfolio project by **Ron VIncent Cada**.  
 Showcases scalable scraping, background processing, and real-time user experience.
