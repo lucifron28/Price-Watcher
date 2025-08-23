@@ -13,7 +13,18 @@ Built with Django 5 + DRF, React 18 (Vite), Tailwind CSS v4, Celery, Redis, and 
 - **Analytics Dashboard** – Aggregate savings, best-time-to-buy insights, and store comparison.
 - **Role-Based Access** – Admin, standard, and read-only roles via JWT auth.
 
-## 🏗️ Tech Stack
+## � Supported Websites
+
+| Platform | Status | Country | Features | Notes |
+|----------|--------|---------|----------|-------|
+| **Lazada** | ✅ Active | Philippines | Price, Stock, Ratings, Discounts | Fully functional with anti-detection |
+| **Shopee** | ❌ Disabled | Philippines | - | Requires login + aggressive anti-bot protection |
+| **Amazon** | 🔄 Planned | Global | - | Future implementation |
+| **Shein** | 🔄 Planned | Global | - | Future implementation |
+
+> **Note**: Currently focusing on Lazada Philippines where scraping works reliably. Additional platforms will be added based on feasibility and anti-bot protection levels.
+
+## �🏗️ Tech Stack
 | Layer      | Technology |
 |------------|------------|
 | Backend    | Django 5, Django REST Framework, PostgreSQL 15 |
