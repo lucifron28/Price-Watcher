@@ -20,7 +20,7 @@ Built with Django 5 + DRF, React 18 (Vite), Tailwind CSS v4, Celery, Redis, and 
 | Auth       | djangorestframework-simplejwt |
 | Tasks      | Celery 5 + Redis 7 |
 | Scraping   | Playwright 1.44 (headless Chromium) |
-| Frontend   | React 19, Vite 5, Tailwind CSS v4, Redux Toolkit |
+| Frontend   | React 19, Vite 5, Tailwind CSS v4, Zustand |
 | Realtime   | Django Channels / WebSocket |
 | DevOps     | Docker, Docker Compose, GitHub Actions |
 | Monitoring | Sentry, Prometheus, Grafana |
@@ -142,5 +142,5 @@ MIT
 
 ---
 
-Portfolio project by **Ron VIncent Cada**.  
+Portfolio project by **Ron Vincent Cada**.  
 Showcases scalable scraping, background processing, and real-time user experience.
