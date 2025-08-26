@@ -5,6 +5,7 @@ import { useForm, validators } from '../hooks/useForm';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 import { Alert } from '../components/Alert';
+import { ThemeToggle } from '../components/ThemeToggle';
 import type { LoginData } from '../utils/api';
 
 const initialValues: LoginData = {
@@ -64,6 +65,11 @@ export function LoginPage() {
 
   return (
     <div className="min-h-screen bg-light-bg dark:bg-dark-bg flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      {/* Theme Toggle */}
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
+      
       <div className="max-w-md w-full space-y-8">
         {/* Header */}
         <div className="text-center">
